@@ -168,7 +168,7 @@ const D={
     {t:"First tranche in, start bulk equipment procurement",pri:1,st:"wait",owner:"Finance/Ops",dep:"After investment lands",s:6,d:2},
     {t:"Milestone review & subsequent tranches",pri:2,st:"wait",owner:"Finance",dep:"",s:9,d:12},
   ]},
-  ob_infokes:{role:"Funding line ② · change-share (non-cash) via Articura to take ≥51% of Infokes · entity TBD",tasks:[
+  ob_infokes:{role:"Funding line ② · change-share (non-cash) via Articura to hold ≥51% of Infokes · entity TBD",tasks:[
     {t:"[Open issue] Investing entity: OB (listco, quiet-period/sell-off rules) or Articura (private, no cash-out)",pri:1,st:"wait",owner:"CEO/Legal",dep:"Unlock: OB completes investment in Articura",s:5,d:2,ms:true},
     {t:"Change-share framework: staged share release against milestones (anti-dump)",pri:1,st:"wait",owner:"CEO/Legal",dep:"Non-cash share swap",s:6,d:3,ms:true},
     {t:"Close ≥51% holding",pri:1,st:"wait",owner:"Legal/Finance",dep:"After entity decided",s:8,d:3},
@@ -221,7 +221,7 @@ const D={
     {t:"Biopharma: RWE · patient recruitment · epidemiology · pharmacovigilance · post-market studies (via OPH ties to GSK, Lilly)",pri:2,st:"wait",owner:"BD",dep:"",s:14,d:10},
   ]},
   infokes:{role:"Business-line-two channel · Infokes (≥51% holding) · largest clinic CMS nationwide · channel to roll out all of Healthcare",tasks:[
-    {t:"After OB investment, launch acquisition: close ≥51% holding (change-share, entity TBD)",pri:1,st:"wait",owner:"CEO/Legal",dep:"Unlock: OB invests Articura (Sept)",s:5,d:3,ms:true},
+    {t:"After OB investment: close ≥51% holding (change-share, entity TBD)",pri:1,st:"wait",owner:"CEO/Legal",dep:"Unlock: OB invests Articura (Sept)",s:5,d:3,ms:true},
     {t:"Governance: Nathan chairman, Lulu stays CEO",pri:1,st:"wait",owner:"CEO",dep:"",s:6,d:2},
     {t:"Along with its CMS (reaching 8,000+ Puskesmas nationwide) → connect HIS/LIS/PACS → channel for AI Server + GPWS",pri:1,st:"wait",owner:"CEO/Lulu",dep:"Use its clinic-connectivity to deploy Healthcare",s:7,d:3,ms:true},
   ]},
@@ -286,7 +286,7 @@ const N={
   token:{x:1000,y:492,w:196,h:60,t:"Token (revenue)",s:"resident health digital twin → insurance / biopharma",fill:"#047857",key:"token"},
 
   // ===== 支线：并购 Infokes 连同 CMS，支撑 Healthcare 铺设 =====
-  obinf:{x:1225,y:250,w:172,h:52,t:"Acquire Infokes",s:"change-share · Articura-led",fill:"#7c3aed",key:"ob_infokes"},
+  obinf:{x:1225,y:250,w:172,h:52,t:"Hold Infokes",s:"change-share · Articura-led",fill:"#7c3aed",key:"ob_infokes"},
   infokes:{x:1225,y:388,w:160,h:60,t:"Infokes (along with CMS)",s:"CMS reaches 8,000+ Puskesmas nationwide",fill:"#8b5cf6",key:"infokes"},
   deploy:{x:1225,y:500,w:160,h:60,t:"Channel rollout",s:"connect HIS/LIS/PACS · deploy AI Server + GPWS",fill:"#6d28d9",key:"lulu"},
 };
@@ -421,7 +421,7 @@ document.getElementById("liveNote").innerHTML=
   "<b>Invest lines (🟡 coins) vs business flows:</b> Nathan &amp; OB invest Articura (51% / 49%); AL invests the AIDC subsidiary. <b>OB's 49% capital drives two lines</b> — two golden capital beams (with flowing coins + labels) fan out from Articura to power the 🟢 Healthcare and 🟣 Infokes line origins, so you can see at a glance these two lines are funded by OB."+
   "<br>🔵 <b>Line 1 · AIDC</b>: AIDC Co. (Articura wholly-owned) → compute center (100MW in 8–10 mo →500MW; 5–10% runs the brain / 90% commercial) → AIDC operating revenue (colocation · GPUaaS · managed · bandwidth · zone premium)."+
   "<br>🟢 <b>Line 2 · Healthcare (four parallel revenues)</b>: <b>AI Server</b> = sovereign healthcare LLM access node; <b>GPWS</b> = trusted data-collection terminal by OPH; <b>Platform</b> = embedded in clinic systems, with SATUSEHAT; <b>Token</b> = resident health digital twin → insurance / biopharma. All four are revenue lines, in parallel."+
-  "<br>🟣 <b>Branch · Infokes</b>: OB change-share to acquire Infokes, <b>along with its CMS</b> (reaching 8,000+ Puskesmas nationwide) → connect HIS/LIS/PACS → use this channel to deploy Healthcare's AI Server and GPWS."+
+  "<br>🟣 <b>Branch · Infokes</b>: OB change-share to hold Infokes (≥51%), <b>along with its CMS</b> (reaching 8,000+ Puskesmas nationwide) → connect HIS/LIS/PACS → use this channel to deploy Healthcare's AI Server and GPWS."+
   "<br><span style='color:#9ca3af'>Toggle any line at the top, pause the flow, or step through. Ignition sequence (endorse → announce → invest) is on the «🔵 Pipeline» tab.</span>";
 
 // ===================================================================
@@ -436,7 +436,7 @@ const IGN={
     subs:["· Co-branded joint lab with a university","· Sign pilot-project MOU (national flagship)"]},
   announce:{x:340,y:372,w:320,h:48,t:"② OB announcement (end of July)",s:"",fill:"#c0392b",key:"announce"},
   inject:{x:340,y:468,w:320,h:48,t:"③ OB formally invests Articura (Sept)",s:"",fill:"#b91c3c",key:"announce"},
-  unlock:{x:340,y:560,w:320,h:54,t:"④ Unlock downstream",s:"🟢 Healthcare (OB 49%) · 🟣 change-share acquire Infokes",fill:"#7f1d2e"},
+  unlock:{x:340,y:560,w:320,h:54,t:"④ Unlock downstream",s:"🟢 Healthcare (OB 49%) · 🟣 change-share to hold Infokes",fill:"#7f1d2e"},
 };
 const IGE=[["articura","launch"],["launch","announce"],["announce","inject"],["inject","unlock"]];
 const AID={
@@ -527,7 +527,7 @@ function ignPath(a,b){const x1=a.x,y1=a.y+a.h/2,x2=b.x,y2=b.y-b.h/2;if(Math.abs(
 })();
 document.getElementById("ignNote").innerHTML=
   "<b>Two independent pipelines, each on its own tempo (vertical axis = time on the left; completed blocks are lit ✓, pending ones dimmed):</b>"+
-  "<br>🔴 <b>Sovereign Healthcare AI Model (OB-driven)</b>: Articura (established ✓) → ① end-Jul Launch Event launches two things together (co-branded joint lab; sign pilot-project MOU) → ② end-Jul OB announcement (Aug is the HK quiet period, no announcement allowed) → ③ Sept OB formally invests Articura → ④ unlock downstream (🟢 Healthcare, 🟣 change-share acquire Infokes)."+
+  "<br>🔴 <b>Sovereign Healthcare AI Model (OB-driven)</b>: Articura (established ✓) → ① end-Jul Launch Event launches two things together (co-branded joint lab; sign pilot-project MOU) → ② end-Jul OB announcement (Aug is the HK quiet period, no announcement allowed) → ③ Sept OB formally invests Articura → ④ unlock downstream (🟢 Healthcare, 🟣 change-share to hold Infokes)."+
   "<br>🔵 <b>Physical AIDC (AL-driven, independent of endorsement timing)</b>: Articura sets up wholly-owned AIDC → AL · DC park · AIDC · national power co. 4-party back-to-back agreement → agreement effective, AL invests AIDC immediately, AIDC pays both deposits → first 100MW delivered in 8–10 months (GPU servers ready in parallel) → start operating (operate as delivered) → finally deliver 500MW.";
 
 // tabs
